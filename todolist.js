@@ -1,5 +1,6 @@
 import fs from 'fs';
 import PromptSync from 'prompt-sync';
+import { Task } from './tasks.js'
 
 const prompt = PromptSync({ sigint: true });
 
