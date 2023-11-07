@@ -5,8 +5,14 @@ import { Task } from './tasks.js'
 const prompt = PromptSync({ sigint: true });
 
 const data = fs.readFileSync('tasks.csv', 'utf8');
-
 const savedTasks = data.trim().split('\r\n');
 
+
+class TodoList {
+  constructor() {
+    this.tasks = [];
+    this.readFromCsv();
+  }
+}
 
 
