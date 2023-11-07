@@ -36,6 +36,11 @@ class TodoList {
     }
   }
 
+  saveToCsv() {
+    const taskData = this.tasks.map(task => `${task.name},${task.completed}`);
+    fs.writeFileSync('tasks.csv', taskData.join('\n'));
+  }
+
   readFromCsv() {
     if (fs.existsSync('tasks.csv')) {
       const data = fs.readFileSync('tasks.csv', 'utf8');
