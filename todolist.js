@@ -3,4 +3,9 @@ import PromptSync from 'prompt-sync';
 
 const prompt = PromptSync({ sigint: true });
 
+const data = fs.readFileSync('tasks.csv', 'utf8');
+
+const savedTasks = data.trim().split('\r\n');
+
+
 
