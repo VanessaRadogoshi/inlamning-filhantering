@@ -28,6 +28,13 @@ class TodoList {
     }
   }
 
+  removeTask(taskName) {
+    const index = this.tasks.findIndex((t) => t.name === taskName);
+    if (index !== -1) {
+      this.tasks.splice(index, 1);
+      this.saveToCsv();
+    }
+  }
 }
 
 
