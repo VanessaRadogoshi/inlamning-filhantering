@@ -13,6 +13,14 @@ class TodoList {
     this.tasks = [];
     this.readFromCsv();
   }
+
+  addTask(taskName) {
+    const task = new Task(taskName);
+    this.tasks.push(task);
+    this.saveToCsv();
+}
+
+
 }
 
 
