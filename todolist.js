@@ -35,6 +35,16 @@ class TodoList {
       this.saveToCsv();
     }
   }
+
+  readFromCsv() {
+    if (fs.existsSync('tasks.csv')) {
+      const data = fs.readFileSync('tasks.csv', 'utf8');
+      this.tasks = data.trim().split('\n').map(taskData => {
+        const [name, completed] = taskData.split(',');
+        return new Task(name, completed === 'true');
+      });
+    }
+  }
 }
 
 
