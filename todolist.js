@@ -20,6 +20,13 @@ class TodoList {
     this.saveToCsv();
 }
 
+  completeTask(taskName) {
+    const task = this.tasks.find((t) => t.name === taskName);
+    if (task) {
+      task.completed = !task.completed;
+      this.saveToCsv();
+    }
+  }
 
 }
 
