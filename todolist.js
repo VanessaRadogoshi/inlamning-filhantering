@@ -8,7 +8,7 @@ const data = fs.readFileSync('tasks.csv', 'utf8');
 const savedTasks = data.trim().split('\r\n');
 
 
-class TodoList {
+export class TodoList {
   constructor() {
     this.tasks = [];
     this.readFromCsv();
