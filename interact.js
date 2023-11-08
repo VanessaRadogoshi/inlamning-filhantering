@@ -28,3 +28,13 @@ else if (choice === '4') {
 else {
   console.log('HAKUNA MATATA :)')
 }
+
+myTodoList.saveToCsv();
+
+
+function displayTasks(todoList) {
+  for (const task of todoList.tasks) {
+    const status = task.completed ? 'completed' : 'not completed';
+    console.log(`${task.name} : ${status}`);
+  }
+}
