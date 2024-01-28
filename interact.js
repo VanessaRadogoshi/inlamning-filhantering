@@ -6,30 +6,37 @@ const prompt = PromptSync({ sigint: true });
 
 const myTodoList = new TodoList();
 
-console.log('1.Add task');
-console.log('2.Remove task');
-console.log('3.Complete task');
-console.log('4.Display tasks');
 
-let choice = prompt("Enter your choice from 1 to 4: ");
-
-if (choice === '1') {
-  myTodoList.addTask(prompt('Add task: '));
-} 
-else if (choice === '2') {
-  myTodoList.removeTask(prompt('Remove task: '));
-}
-else if (choice === '3') {
-  myTodoList.completeTask(prompt('Complete task: '));
-}
-else if (choice === '4') {
-  displayTasks(myTodoList);
-}
-else {
-  console.log('HAKUNA MATATA :)')
+function displayMenu() {
+  console.log('1.Add task');
+  console.log('2.Remove task');
+  console.log('3.Complete task');
+  console.log('4.Display tasks');
 }
 
-myTodoList.saveToCsv();
+let choice;
+do {
+  displayMenu();
+  choice = prompt("Enter your choice from 1 to 4: ");
+
+  if (choice === '1') {
+    myTodoList.addTask(prompt('Add task: '));
+  }
+  else if (choice === '2') {
+    myTodoList.removeTask(prompt('Remove task: '));
+  }
+  else if (choice === '3') {
+    myTodoList.completeTask(prompt('Complete task: '));
+  }
+  else if (choice === '4') {
+    displayTasks(myTodoList);
+  }
+  else {
+    console.log('Invalid choice. You can try again.');
+  }
+} while (choice !== '4');
+
+
 
 
 function displayTasks(todoList) {
