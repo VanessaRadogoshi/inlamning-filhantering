@@ -20,7 +20,9 @@ do {
   choice = prompt("Enter your choice from 1 to 4: ");
 
   if (choice === '1') {
-    myTodoList.addTask(prompt('Add task: '));
+    const taskName = prompt('Add task: ');
+    const priority = prompt('Enter priority between 1 to three (1 being the most important): ');
+    myTodoList.addTask(taskName, priority);
   }
   else if (choice === '2') {
     myTodoList.removeTask(prompt('Remove task: '));
@@ -42,6 +44,10 @@ do {
 function displayTasks(todoList) {
   for (const task of todoList.tasks) {
     const status = task.completed ? 'completed' : 'not completed';
+
+     console.log(`TaskName: ${taskName}, Priority: ${priority}`);
+
+
     console.log(`${task.name} : ${status}`);
   }
 }
