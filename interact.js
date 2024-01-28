@@ -34,6 +34,11 @@ do {
   else if (choice === '4') {
     displayTasks(myTodoList);
   }
+  else if (choice === '5') {
+    const taskName = prompt('enter the name of the task of which you want to change the priority: ');
+    const newPriority = prompt('Enter the new priority level between 1 to 3: ');
+    myTodoList.changePriority(taskName, parseInt(newPriority, 10));
+  }
   else {
     console.log('Invalid choice. You can try again.');
   }
@@ -46,9 +51,7 @@ function displayTasks(todoList) {
   for (const task of todoList.tasks) {
     const status = task.completed ? 'completed' : 'not completed';
 
-     console.log(`TaskName: ${taskName}, Priority: ${priority}`);
-
-
+    console.log(`TaskName: ${task.name}, Priority: ${task.priority}`);
     console.log(`${task.name} : ${status}`);
   }
 }
