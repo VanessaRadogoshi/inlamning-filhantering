@@ -18,10 +18,10 @@ export class TodoList {
     const task = new Task(taskName);
     this.tasks.push(task);
     this.saveToCsv();
-}
+  }
 
   completeTask(taskName) {
-    const task = this.tasks.find((t) => t.name === taskName);
+    const task = this.tasks.find((t) => this.compareNames(t.name, taskName));
     if (task) {
       task.completed = !task.completed;
       this.saveToCsv();
@@ -29,7 +29,7 @@ export class TodoList {
   }
 
   removeTask(taskName) {
-    const index = this.tasks.findIndex((t) => t.name === taskName);
+    const index = this.tasks.findIndex((t) => this.compareNames(t.name, taskName));
     if (index !== -1) {
       this.tasks.splice(index, 1);
       this.saveToCsv();
@@ -50,6 +50,10 @@ export class TodoList {
       });
     }
   }
+
+
+  compareNames(name1, name2) {
+    return name1.toLowerCase() === name2.toLowerCase();
+  }
+
 }
-
-
