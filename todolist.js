@@ -14,8 +14,13 @@ export class TodoList {
     this.readFromCsv();
   }
 
-  addTask(taskName) {
-    const task = new Task(taskName);
+  addTask(taskName, priority) {
+    if (![1, 2, 3].includes(priority)) {
+      console.log("Please only enter 1, 2 or 3.");
+      return;
+    }
+
+    const task = new Task(taskName, false, priority);
     this.tasks.push(task);
     this.saveToCsv();
   }
