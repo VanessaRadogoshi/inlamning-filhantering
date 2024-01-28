@@ -15,6 +15,9 @@ export class TodoList {
   }
 
   addTask(taskName, priority) {
+    console.log(`Priority received: ${priority}`);
+    console.log(`Priority received: ${priority}`);
+
     priority = parseInt(priority, 10);
 
     if (![1, 2, 3].includes(priority)) {
@@ -44,7 +47,7 @@ export class TodoList {
   }
 
   saveToCsv() {
-    const taskData = this.tasks.map(task => `${task.name},${task.completed}`);
+    const taskData = this.tasks.map(task => `${task.name},${task.completed},${task.priority}`);
     fs.writeFileSync('tasks.csv', taskData.join('\n'));
   }
 
