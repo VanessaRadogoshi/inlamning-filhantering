@@ -20,3 +20,5 @@ I want to first make the application case-insensitive. Right now the application
 
 I want to add another function: 
 - Be able to add the priority level of a new added task, which will be automatically saved on the csv file.
+
+The next thing I want to do is to provide the user with another functionality, namely the possibility to change the priority status whenever they want. If they chose 1, it means that it is the most important task while 2 means medium important and 3 means less important.   
