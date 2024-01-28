@@ -12,6 +12,7 @@ function displayMenu() {
   console.log('2.Remove task');
   console.log('3.Complete task');
   console.log('4.Display tasks');
+  console.log('5.Change priority:');
 }
 
 let choice;
