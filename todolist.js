@@ -15,6 +15,8 @@ export class TodoList {
   }
 
   addTask(taskName, priority) {
+    priority = parseInt(priority, 10);
+
     if (![1, 2, 3].includes(priority)) {
       console.log("Please only enter 1, 2 or 3.");
       return;
