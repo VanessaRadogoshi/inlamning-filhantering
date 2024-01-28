@@ -1,18 +1,19 @@
-training,false
-meet best friend,false
-laundry,true
-change light bulb,true
-buy ticket to Germany,true
-learn programming jokes,false
-bake a birthday cake for my dog,false
-change light bulb again, ture
-return shoes,true
-write a story about how exciting Sweden is,false
-call family,true
-buy new light bulb, true
-suggest to my husband to buy me another dog,true
-organize a girls week-end, false
-find hotel for Paris trip, true
-call electrician, false
-
-
+training,false,undefined
+meet best friend,false,undefined
+laundry,false,undefined
+change light bulb,false,undefined
+buy ticket to Germany,false,undefined
+learn programming jokes,false,undefined
+bake a birthday cake for my dog,false,undefined
+change light bulb again,false,undefined
+return shoes,false,undefined
+write a story about how exciting Sweden is,false,undefined
+call family,false,undefined
+buy new light bulb,true,undefined
+suggest to my husband to buy me another dog,false,undefined
+organize a girls week-end,false,undefined
+draw with some happy colours,true,undefined
+eat healthy,true,1
+singen,false,undefined
+buy home,false,3
+cold shower,false,3
