@@ -66,4 +66,12 @@ export class TodoList {
     return name1.toLowerCase() === name2.toLowerCase();
   }
 
+
+  changePriority(taskName, newPriority) {
+    const task = this.tasks.find((t) => this.compareNames(t.name, taskName));
+    if (task) {
+      task.changePriority(newPriority);
+      this.saveToCsv();
+    }
+  }
 }
