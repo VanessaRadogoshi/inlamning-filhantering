@@ -17,3 +17,6 @@ Changes:
 After Benjamins feedback, I will try to make some changes to the code to make it work more effectively. I will try to find a solution to not have to rerun the code each time after one application. I will also add some more functionalities to the to-do list so that it will be more interessting and efficiant for the users.
 
 I want to first make the application case-insensitive. Right now the application is case-sensitive when i want to add, remove or complete a task. This is what I want to change. 
+
+I want to add another function: 
+- Be able to add the priority level of a new added task, which will be automatically saved on the csv file.
